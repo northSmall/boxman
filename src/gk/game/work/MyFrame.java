@@ -25,6 +25,9 @@ public class MyFrame extends JFrame implements ActionListener {
 		this.initFrame();
 	}
 
+	/**
+	 * initialize the frame
+	 */
 	private void initFrame(){
 		setSize(800, 800);//sets the frame's width and height
 		setVisible(true);
@@ -98,7 +101,7 @@ public class MyFrame extends JFrame implements ActionListener {
 			}
 			panel.remove();
 		}else if (e.getSource() == btnchoose) {
-			String lel = JOptionPane.showInputDialog(this, "Please input the level num：(1~30)");
+			String lel = JOptionPane.showInputDialog(this, "Please input the level num：(1~5)");
 			//when choose cancel
 			if (lel == null || "".equals(lel)) {
 				panel.requestFocus();

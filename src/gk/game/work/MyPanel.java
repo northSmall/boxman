@@ -12,7 +12,7 @@ import javax.swing.JPanel;
 
 public class MyPanel extends JPanel implements IMyPanel{
 	private static final long serialVersionUID = 1L;
-	int maxLevel = 2;
+	int maxLevel = 5;
 	int[][] map, mapFlag;
 	int manX, manY;
 	Image[] myImage;
@@ -112,7 +112,7 @@ public class MyPanel extends JPanel implements IMyPanel{
 	}
 
 	public int back() {
-		return (Integer) stack.pop();
+		return stack.pop();
 	}
 
 	public void remove() {
@@ -162,10 +162,9 @@ public class MyPanel extends JPanel implements IMyPanel{
 	}
 
 	public void backup(int flag) {
-		int n = flag;
-		if (n == 10) {
+		if (flag == 10) {
 			judgePic();
-		} else if (n == 11) {
+		} else if (flag == 11) {
 			if (mapFlag[manY][manX] == 4 || mapFlag[manY][manX] == 9) {
 				map[manY][manX] = 9;
 			} else
@@ -225,10 +224,9 @@ public class MyPanel extends JPanel implements IMyPanel{
 	}
 
 	public void backDown(int flag) {
-		int n = flag;
-		if (n == 20) {
+		if (flag == 20) {
 			judgePic();
-		} else if (n == 21) {
+		} else if (flag == 21) {
 			if (mapFlag[manY][manX] == 4 || mapFlag[manY][manX] == 9)
 				map[manY][manX] = 9;
 			else
@@ -288,10 +286,9 @@ public class MyPanel extends JPanel implements IMyPanel{
 	}
 
 	public void backLeft(int flag) {
-		int n = flag;
-		if (n == 30) {
+		if (flag == 30) {
 			judgePic();
-		} else if (n == 31) {
+		} else if (flag == 31) {
 			if (mapFlag[manY][manX] == 4 || mapFlag[manY][manX] == 9) {
 				map[manY][manX] = 9;
 			} else
@@ -357,10 +354,9 @@ public class MyPanel extends JPanel implements IMyPanel{
 	}
 
 	public void backRight(int flag) {
-		int n = flag;
-		if (n == 40) {
+		if (flag == 40) {
 			judgePic();
-		} else if (n == 41) {
+		} else if (flag == 41) {
 			if (mapFlag[manY][manX] == 4 || mapFlag[manY][manX] == 9) {
 				map[manY][manX] = 9;
 			} else
