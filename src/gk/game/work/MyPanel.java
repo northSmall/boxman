@@ -88,12 +88,11 @@ public class MyPanel extends JPanel implements IMyPanel{
 			if (level == maxLevel) {//if this is the last level
 				JOptionPane.showMessageDialog(this, "Congratulations,you have passed the last level!");
 			} else {
-				String message = "Congratulations，you have passed the level " + level + "!\n whether get into the next level or not？";
-				int choice = 0;
-				choice = JOptionPane.showConfirmDialog(null, message, "passed the level", JOptionPane.YES_NO_OPTION);
-				if (choice == 1)//press yes
+				String message = "Congratulations,you have passed the level " + level + "!\n whether get into the next level or not？";
+				int choiceResult = JOptionPane.showConfirmDialog(null, message, "passed the level", JOptionPane.YES_NO_OPTION);
+				if (choiceResult == 1)//press yes
 					System.exit(0);
-				else if (choice == 0) {//press no
+				else if (choiceResult == 0) {//press no
 					level++;
 					this.initPanel(level);
 				}
@@ -418,7 +417,7 @@ public class MyPanel extends JPanel implements IMyPanel{
 	}
 	
 	/**
-	 * when the man is moved,the picture of the previous axis.
+	 * when the man has been moved,the previous picture's axis.
 	 */
 	private void judgePic() {
 		//aim or red box

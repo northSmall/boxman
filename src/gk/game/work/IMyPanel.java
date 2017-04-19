@@ -5,7 +5,7 @@ import java.awt.event.KeyListener;
 public interface IMyPanel extends KeyListener {
 
     /**
-     * when press key,init the panel
+     * when press key,restart the panel
      * @param gameNum
      */
     void initPanel(int gameNum);
